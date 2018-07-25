@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Shooter</title>
+
+    <link rel="stylesheet" type="text/css" href="shooter.css" />
+    <script type="text/javascript" src="shooter.js"></script>
+
+    <script id="shader-vs" type="x-shader/x-vertex">
+      attribute vec2 a_position;
+
+      void main() {
+        gl_Position = vec4(a_position, 0, 1);
+      }
+    </script>
+
+    <script id="shader-fs" type="x-shader/x-fragment">
+      precision mediump float;
+      void main() {
+        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+      }
+    </script>
+  </head>
+
+  <body>
+    <p style="float: right"><span id="fps">0</span> FPS</p>
+    <h1>Shooter</h1>
+    <canvas id="canvas" width="800" height="600"></canvas>
+  </body>
+</html>
